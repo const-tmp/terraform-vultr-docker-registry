@@ -1,6 +1,10 @@
 variable "region" {
   type = string
 }
+variable "plan" {
+  type    = string
+  default = "vc2-1c-1gb"
+}
 variable "ssh_key_name" {
   type = string
 }
@@ -14,10 +18,15 @@ variable "domain" {
 variable "subdomain" {
   type = string
 }
-variable "user_hashed_password" {
+variable "linux_user_hashed_password" {
   type        = string
   sensitive   = true
   description = "openssl passwd -1"
+}
+variable "linux_user" {
+  type        = string
+  default     = "registry"
+  description = "Linux user running registry"
 }
 variable "registry_auth" {
   type        = string
