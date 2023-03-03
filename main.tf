@@ -41,7 +41,3 @@ resource "vultr_dns_record" "dns" {
   name   = var.subdomain
   type   = "A"
 }
-
-#-v "$(pwd)"/certs:/certs \
-#-e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
-#-e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
